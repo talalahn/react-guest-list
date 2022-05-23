@@ -12,10 +12,10 @@ function App() {
   const [refetch, setRefetch] = useState(true);
   const [loading, setLoading] = useState(true);
 
-  //CREATING A NEW GUEST!!! and SEND TO SERVER
+  // CREATING A NEW GUEST!!! and SEND TO SERVER
   async function addGuest() {
     console.log('addGuest was called');
-    const response = await fetch(`${baseUrl}`, {
+    const response = await fetch(baseUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ function App() {
 
   useEffect(() => {
     async function fetchGuests() {
-      const response = await fetch(`${baseUrl}`);
+      const response = await fetch(baseUrl);
       const allGuests = await response.json();
       setGuestList(allGuests);
       console.log('guest list was fetched');
