@@ -123,10 +123,10 @@ function App() {
                 });
               }}
             />
-            <h3>Attending: </h3>
 
             <button
               type="button"
+              aria-label="Remove"
               onClick={() => {
                 deleteGuest(guest.id).catch(() => {
                   console.log('import failed');
