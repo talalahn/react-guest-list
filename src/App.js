@@ -47,9 +47,13 @@ function App() {
       method: 'DELETE',
     });
     const deletedGuest = await response.json();
-    response.status === 200
-      ? setGuestList(guestList.filter((g) => g.id !== deletedGuest.id))
-      : alert('Error Deleting This Guest');
+    const newGuestList = guestList.filter((guest) => {
+      return guest.id !== deletedGuest.id;
+    });
+    // response.status === 200
+    // ? setGuestList(guestList.filter((g) => g.id !== deletedGuest.id))
+    // : alert('Error Deleting This Guest');
+    setGuestList(newGuestList);
   };
 
   useEffect(() => {
