@@ -4,7 +4,7 @@ function App() {
   // const [firstName, setFirstName] = useState('');
   // const [lastName, setLastName] = useState('');
 
-  const baseUrl = 'http://guest-list-react-ta.herokuapp.com/guests';
+  const baseUrl = 'https://guest-list-react-ta.herokuapp.com/guests';
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [guestList, setGuestList] = useState([]);
