@@ -73,7 +73,7 @@ function App() {
     <div data-test-id="guest">
       <h2> Sign Up </h2>
       <form name="form">
-        <label htmlFor="first-name">First Name</label>
+        <label htmlFor="first-name">First name</label>
         <input
           name="first-name"
           required
@@ -81,7 +81,7 @@ function App() {
             setFirstName(e.target.value);
           }}
         />
-        <label htmlFor="last-name">Last Name</label>
+        <label htmlFor="last-name">Last name</label>
         <input
           name="last-name"
           required
