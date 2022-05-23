@@ -31,7 +31,7 @@ function App() {
   }
 
   const updateGuest = async (guestId, checkStatus) => {
-    const response = await fetch(`${baseUrl}${guestId}`, {
+    const response = await fetch(`${baseUrl}/${guestId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ function App() {
     setRefetch(!refetch);
   };
   const deleteGuest = async (guest) => {
-    const response = await fetch(`${baseUrl}${guest}`, {
+    const response = await fetch(`${baseUrl}/${guest}`, {
       method: 'DELETE',
     });
     const deletedGuest = await response.json();
