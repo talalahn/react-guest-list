@@ -66,7 +66,7 @@ function App() {
   }, [refetch]);
 
   if (loading) {
-    return 'LOADING...';
+    return 'Loading...';
   }
 
   return (
