@@ -130,6 +130,7 @@ function App() {
               onClick={() => {
                 deleteGuest(guest.id).catch(() => {
                   console.log('import failed');
+                  setRefetch(!refetch);
                 });
               }}
             >
