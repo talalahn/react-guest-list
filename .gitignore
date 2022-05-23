@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/express-guest-list-api-memory-data-store
 
 # testing
 /coverage
