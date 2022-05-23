@@ -47,6 +47,7 @@ function App() {
       method: 'DELETE',
     });
     const deletedGuest = await response.json();
+    setRefetch(!refetch);
     const newGuestList = guestList.filter((g) => {
       return g.id !== deletedGuest.id;
     });
