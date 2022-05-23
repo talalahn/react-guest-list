@@ -75,7 +75,7 @@ function App() {
       <form name="form">
         <label htmlFor="first-name">First name</label>
         <input
-          name="first-name"
+          id="first-name"
           required
           onChange={(e) => {
             setFirstName(e.target.value);
@@ -84,7 +84,7 @@ function App() {
 
         <label htmlFor="last-name">Last name </label>
         <input
-          name="last-name"
+          id="last-name"
           required
           onChange={(e) => {
             setLastName(e.target.value);
