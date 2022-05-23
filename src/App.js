@@ -42,18 +42,18 @@ function App() {
     console.log(updatedGuest);
     setRefetch(!refetch);
   };
-  const deleteGuest = async (guest) => {
-    const response = await fetch(`${baseUrl}/${guest}`, {
+  const deleteGuest = async (guestId) => {
+    const response = await fetch(`${baseUrl}/${guestId}`, {
       method: 'DELETE',
     });
     const deletedGuest = await response.json();
-    const newGuestList = guestList.filter((guest) => {
-      return guest.id !== deletedGuest.id;
-    });
-    // response.status === 200
-    // ? setGuestList(guestList.filter((g) => g.id !== deletedGuest.id))
-    // : alert('Error Deleting This Guest');
-    setGuestList(newGuestList);
+    // const newGuestList = guestList.filter((g) => {
+    //   return g.id !== deletedGuest.id;
+    // });
+    response.status === 200
+      ? setGuestList(guestList.filter((g) => g.id !== deletedGuest.id))
+      : alert('Error Deleting This Guest');
+    // setGuestList(newGuestList);
   };
 
   useEffect(() => {
