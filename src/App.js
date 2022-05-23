@@ -73,35 +73,32 @@ function App() {
     <div data-test-id="guest">
       <h2> Sign Up </h2>
       <form name="form">
-        <label htmlFor="first-name">
-          First name
-          <input
-            name="first-name"
-            required
-            onChange={(e) => {
-              setFirstName(e.target.value);
-            }}
-          />
-        </label>
-        <label htmlFor="last-name">
-          Last name
-          <input
-            name="last-name"
-            required
-            onChange={(e) => {
-              setLastName(e.target.value);
-            }}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter') {
-                e.preventDefault();
-                addGuest().catch(() => {
-                  console.log('addGuest failed');
-                });
-                document.form.reset();
-              }
-            }}
-          />
-        </label>
+        <label htmlFor="first-name">First name</label>
+        <input
+          name="first-name"
+          required
+          onChange={(e) => {
+            setFirstName(e.target.value);
+          }}
+        />
+
+        <label htmlFor="last-name">Last name </label>
+        <input
+          name="last-name"
+          required
+          onChange={(e) => {
+            setLastName(e.target.value);
+          }}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              addGuest().catch(() => {
+                console.log('addGuest failed');
+              });
+              document.form.reset();
+            }
+          }}
+        />
       </form>
 
       <h1>Guest List</h1>
