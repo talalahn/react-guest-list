@@ -75,7 +75,7 @@ function App() {
   }
 
   return (
-    <div data-test-id="guest">
+    <div>
       <h2> Sign Up </h2>
       <form name="form">
         <label htmlFor="first-name">First name</label>
@@ -109,13 +109,12 @@ function App() {
       <h1>Guest List</h1>
       {guestList.map((guest) => {
         return (
-          <div key={guest.id}>
+          <div data-test-id="guest" key={guest.id}>
             <h3>First Name: {guest.firstName}</h3>
             <h3>Last Name: {guest.lastName}</h3>
             <h3>
               Attending: {guest.attending ? 'attending' : 'not attending'}
             </h3>
-
             <input
               type="checkbox"
               aria-label="attending"
@@ -128,7 +127,6 @@ function App() {
                 });
               }}
             />
-
             <button
               type="button"
               aria-label="Remove"
